@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    height: 150px;
+    background-image: url(../Images/backgrd.png);
+    background-repeat: repeat-x;
+    line-height: 150px;
+    text-align: center;
+    color: yellow;
+    text-shadow: 3px 3px 3px red;
+}
+
+.nav {
+    text-align: center;
+    height: 50px;
+    background-color: #4dc57b;
+    line-height: 50px;
+}
+
+.container {
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 15%;
+    background-color: lightblue;
+}
+
+.right {
+    width: 15%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.right div {
+    text-align: center;
+    width: 80%;
+    height: 100px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    line-height: 100px;
+    box-shadow: 5px 5px grey;
+    background-color: bisque;
+}
+
+.content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: scroll;
+}
+
+.content div {
+    display: flex;
+    flex-direction: row;
+    height: 45%;
+    margin-bottom: 10px;
+}
+
+.content div div {
+    width: 50%;
+    border: 3px solid gray;
+    overflow: scroll;
+    height: 100%;
+    margin: 10px;
+}
+
+.footer {
+    height: 50px;
+    background-color: blue;
+    text-align: center;
+    color: yellow;
+    line-height: 50px;
+}
+
+.menu li {
+    background-color: darkcyan;
+    display: inline-block;
+    width: 120px;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.menu a:hover{
+    background-color:rgb(19, 212, 212) ;
+}
+.menu .submenu{
+    display: none;
+    position: absolute;
+}
+.menu li:hover .submenu{
+    display: block;
+}
+
+.mainlist{
+    height: 30px;
+    line-height: 30px;
+    background-color: blue;
+    color: white;
+    padding-left: 10px;
+}
+.list{
+    list-style-type: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
