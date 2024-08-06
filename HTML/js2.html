@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js2</title>
+    <script>
+      function checkYear(year) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+          return 1;
+        }
+        return 0;
+      }
+      var Month = prompt("Nhập tháng");
+      if (Month > 0 && Month < 12 && Month != null) {
+        var year = prompt("Nhập năm");
+        if (year != null) {
+          switch (Number(Month)) {
+            case 2:
+              {
+                if (checkYear(year) == 1) {
+                  document.write(
+                    "<h1>Tháng 2 năm " + year + " có 29 ngày</h1>"
+                  );
+                } else {
+                  document.write(
+                    "<h1>Tháng 2 năm " + year + " có 28 ngày</h1>"
+                  );
+                }
+              }
+              break;
+              2;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+              document.write(
+                "<h1>Tháng " + Month + " năm " + year + " có 30 ngày </h1>"
+              );
+              break;
+            default:
+              document.write(
+                "<h1>Tháng " + Month + " năm " + year + " có 31 ngày </h1>"
+              );
+              break;
+          }
+        }
+      }
+      function printDate() {
+        var d = new Date();
+        var nam = d.getFullYear();
+        var thang = d.getMonth() + 1;
+        var ngay = d.getDate();
+        var thu = d.getDay() + 1;
+        var gio = d.getHours();
+        var phut = d.getMinutes();
+        var giay = d.getSeconds();
+        document.getElementById("date").innerHTML =
+          "Hôm nay, thứ " +
+          thu +
+          " ngày " +
+          ngay +
+          "/" +
+          thang +
+          "/" +
+          nam +
+          " " +
+          gio +
+          ":" +
+          phut +
+          ":" +
+          giay;
+      }
+    </script>
+  </head>
+  <body>
+    <button type="submit" onclick="printDate()">Xem ngày giờ</button>
+    <p id="date"></p>
+  </body>
+</html>
