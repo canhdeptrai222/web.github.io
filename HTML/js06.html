@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DangKy() {
+            var ten = document.forms.myform["username"].value;
+            var mk = document.forms.myform["password"].value;
+            var ns = document.forms.myform["birth"].value;
+            var ngaysinh = new Date(ns);
+            var ngayhientai = new Date();
+            var tuoi = ngayhientai.getFullYear() - ngaysinh.getFullYear();
+            var gt = document.forms.myform["gt"].value;
+            var vt = document.forms.myform["problem"].value;
+            document.forms.myform["res"].value = "Chào mừng " + ten + "\n Bạn là " + gt + "\n Mật khẩu của bạn có " + mk.length + " kí tự\n" +
+                "tuổi của bạn là " + tuoi + "\n Vấn đề bạn quan tâm là: " + qt;
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form id="myform" onsubmit="return DangKy()">
+        <table border="1" width="80%">
+            <caption>
+                <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+            </caption>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" id="username" name="username" required value="canh"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" id="password" name="password" required value="123456789"></td>
+
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="date" name="birth" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td><input type="radio" name="gt" value="Nam" checked>Nam
+                    <input type="radio" name="gt" value="Nữ">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Vấn đề bạn quan tâm</td>
+                <td><select name="problem">
+                        <option value="economic" selected>Kinh tế</option>
+                        <option value="sport">Thể thao</option>
+                        <option value="art">Văn học nghệ thuật</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Đăng ký"></td>
+                <td><input type="reset" value="Hủy"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="res" cols="80%" rows="5"></textarea></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JavaScript/stuff.js"></script>
+</head>
+
+<body>
+    <form id="myForm" onsubmit="return Tinh()">
+        <table border="1" width="80%">
+            <tr>
+                <th colspan="2">CÁC PHÉP TÍNH SỐ HỌC</th>
+            </tr>
+            <tr>
+                <td><label for="num1">Số thứ nhất</label></td>
+                <td><input type="text" id="num1" name="num1" placeholder="10" /></td>
+            </tr>
+            <tr>
+                <td><label for="num2">Số thứ hai</label></td>
+                <td><input type="text" id="num2" name="num2" placeholder="20" /></td>
+            </tr>
+            <tr>
+                <td>Chọn phép toán</td>
+                <td>
+                    <input type="radio" name="operation" value="+" />Cộng <br />
+                    <input type="radio" name="operation" value="-" />Trừ <br />
+                    <input type="radio" name="operation" value="*" />Nhân <br />
+                    <input type="radio" name="operation" value="/" />Chia
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Thực hiện">
+                    <input type="reset" value="hủy">
+                </td>
+                <td><input type="text" name="kq" readonly></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
